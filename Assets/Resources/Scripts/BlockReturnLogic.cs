@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/*
+ *	This code is used for the green blocks. 
+ *  The only thing edited was the update method. 
+ *  It now changes the position with a new Vector3. 
+ */
+using UnityEngine;
 using System.Collections;
 using Leap;
 
@@ -8,14 +13,20 @@ public class BlockReturnLogic : MonoBehaviour {
 
 	Controller m_leapController;
 
+	//speed variable 
+	public float speed = 4f;  
+
 	void Start() {
 		m_originalPos = transform.position;
 		m_originalRot = transform.rotation;
+		speed = 0.02f; 
 		m_leapController = new Controller();
 	}
 
 	void Update() {
 		Frame f = m_leapController.Frame();
+		//editing original position so it can move! 
+		transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - speed); 
 		bool pinch = false;
 		for (int i = 0; i < f.Hands.Count; ++i) {
 			if (f.Hands[i].PinchStrength > 0.6f) {
