@@ -28,6 +28,13 @@ public class BlockScoreLogic : MonoBehaviour {
 	void Update() {
 		// clean up after ourselves...
 		moveAhead(); 
-		if (transform.position.z < -20.0f) Destroy(gameObject);
+		if (transform.position.z < -20.0f) {
+			Destroy (gameObject);
+		} else if (transform.position.y < -20.0f | transform.position.y > 20.0f) {
+			Destroy (gameObject); 
+		} else if (transform.position.x < -20.0f | transform.position.x > 20.0f) {
+			Destroy (gameObject); 
+		}
+
 	}
 }
