@@ -12,7 +12,7 @@ public class BlockScoreLogic : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision c) {
-		if (m_hasBeenHit) return;
+		if (m_hasBeenHit ) return;
 		m_hasBeenHit = true;
 		GameObject.Find("Score").GetComponent<ScoreDisplay>().m_score++;
 	}
