@@ -6782,6 +6782,10 @@ Prefab:
       value: 
       objectReference: {fileID: 11400008, guid: fd49ea2f226ea4c82a53c5ef13232f8f,
         type: 2}
+    - target: {fileID: 400000, guid: c9f2277f2b4414ff9abf05e783890171, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9f2277f2b4414ff9abf05e783890171, type: 2}
   m_RootGameObject: {fileID: 1022897791}
