@@ -7,6 +7,7 @@ public class BlockScoreLogic : MonoBehaviour {
 	public float speed; 
 
 	bool m_hasBeenHit = false;
+	bool goingForward = true; 
 	public void ResetScore() {
 		m_hasBeenHit = false;
 	}
@@ -19,15 +20,27 @@ public class BlockScoreLogic : MonoBehaviour {
 
 	void Start(){
 		speed = 0.05f; 
+
 	}
 	//method used to move blocks towards screen 
 	void moveAhead(){
-		transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - speed); 
+		if (goingForward) {
+			transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z - speed); 
+		} else {
+			transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + (4 * speed)); 
+		}
 	}
+
+	void ChangeDirection(){
+				if (Input.GetButtonDown ("space")) {
+						goingForward = false; 
+				}
+		}
 
 	void Update() {
 		// clean up after ourselves...
 		moveAhead(); 
+		ChangeDirection (); 
 		if (transform.position.z < -20.0f) Destroy(gameObject);
 	}
 }

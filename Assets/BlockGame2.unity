@@ -3478,6 +3478,7 @@ GameObject:
   - 95: {fileID: 470179444}
   - 114: {fileID: 470179443}
   - 114: {fileID: 470179445}
+  - 114: {fileID: 470179446}
   m_Layer: 0
   m_Name: RiggedLeftHand
   m_TagString: Untagged
@@ -3546,6 +3547,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 0}
+--- !u!114 &470179446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 470179441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8baaedd519dac924a87d98a3d8156b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &477804141
 GameObject:
   m_ObjectHideFlags: 0
@@ -15400,6 +15412,7 @@ GameObject:
   - 95: {fileID: 2002595031}
   - 114: {fileID: 2002595030}
   - 114: {fileID: 2002595032}
+  - 114: {fileID: 2002595033}
   m_Layer: 0
   m_Name: RiggedRightHand
   m_TagString: Untagged
@@ -15468,6 +15481,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 100004, guid: 25832bdc499df43aab084db84ae7d407, type: 2}
+--- !u!114 &2002595033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2002595028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8baaedd519dac924a87d98a3d8156b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2003147826
 Prefab:
   m_ObjectHideFlags: 0

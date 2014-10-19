@@ -69,7 +69,7 @@ public class AudioAnalyzer: MonoBehaviour {
 						
 						GameObject newCube = (GameObject)GameObject.Instantiate (blueCube);
 						
-						newCube.transform.position = new Vector3 (0, 0, 30.0f);
+						newCube.transform.position = new Vector3 (0, 0, 25.0f);
 			
 						newCube.transform.Translate (Random.Range (-10, 10), Random.Range (0, 10), 1.0f);
 			
@@ -103,7 +103,7 @@ public class AudioAnalyzer: MonoBehaviour {
 			
 			GameObject newCube = (GameObject)GameObject.Instantiate (redCube);
 			
-			newCube.transform.position = new Vector3 (0, 0, 30.0f);
+			newCube.transform.position = new Vector3 (0, 0, 35.0f);
 			
 			newCube.transform.Translate (Random.Range (-10, 10), Random.Range (0, 10), 1.0f);
 			
