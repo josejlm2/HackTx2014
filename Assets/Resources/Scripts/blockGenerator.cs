@@ -21,13 +21,13 @@ public class blockGenerator : MonoBehaviour {
 		// if ( timeSinceLastSpawn > spawnRate )
 		//  {
 		//Clone the cubes and randomly place them
-		GameObject newCube = (GameObject)GameObject.Instantiate(oneCube);
+		/*GameObject newCube = (GameObject)GameObject.Instantiate(oneCube);
 		
 		newCube.transform.position = new Vector3(0, 0, 20.0f);
 		
 		newCube.transform.Translate(Random.Range(-100, 100), Random.Range(0,100), 1.0f);
 		
-		timeSinceLastSpawn = 0;
+		timeSinceLastSpawn = 0;*/
 		//Debug.Log("cube created");
 		// }
 	}
