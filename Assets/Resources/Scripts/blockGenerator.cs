@@ -30,5 +30,43 @@ public class blockGenerator : MonoBehaviour {
 		timeSinceLastSpawn = 0;*/
 		//Debug.Log("cube created");
 		// }
+
+		/*if (Time.realtimeSinceStartup > 1 && Time.realtimeSinceStartup < 1.01) {
+			spawnBlock(30, 0, 0);
+		}else if (Time.realtimeSinceStartup > 0.80 && Time.realtimeSinceStartup < 0.82) {
+			spawnBlock(30, 10, 10);
+		}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	}
+
+
+	public void spawnBlock(float speed ,float x, float y){
+		GameObject newCube = (GameObject)GameObject.Instantiate (oneCube);
+		newCube.transform.position = new Vector3 (0, 0, speed);
+		newCube.transform.Translate (x, y, 1.0f);
+		
+		
+	}
+	
+	
 }
