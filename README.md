@@ -1,9 +1,10 @@
-BlockDestruction2
+Virtual Space Jam
 =====
-<img src="https://leapmotion-leapdev-production.s3.amazonaws.com/uploads/library/thumbnail_image/44374ce9-e61e-4cac-a027-bcc841e1c3cf.jpg">
+<img src="https://dl.dropboxusercontent.com/u/93568010/Screenshot%202014-10-19%2009.14.07.png">
+<img src="https://dl.dropboxusercontent.com/u/93568010/Screenshot%202014-10-19%2009.14.08.png">
 
 ##Description
-Push, flick, wave around the green blocks to hit the white blocks, close your fist to bring back the green blocks to its initial stage.
+Using Myo and LeapMotion, listen to some techno music while you shoot through levels made by the songs. 
 
 ##API Methods
 * [Finger Joints](https://developer.leapmotion.com/documentation/skeletal/csharp/api/Leap.Finger.html#id50)
