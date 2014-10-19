@@ -29,7 +29,7 @@ public class blockGenerator : MonoBehaviour {
 		
 			newCube.transform.position = new Vector3 (0, 0, 20.0f);
 		
-			newCube.transform.Translate (Random.Range (-15, 15), Random.Range (0, 15), 1.0f);
+			newCube.transform.Translate (Random.Range (-8, 8), Random.Range (0, 8), 1.0f);
 			timeSinceLastSpawn = 0;
 			//Debug.Log("cube created");
 			// }
