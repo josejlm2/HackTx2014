@@ -11,6 +11,7 @@ public class ColorBoxByPose : MonoBehaviour
     // Myo game object to connect with.
     // This object must have a ThalmicMyo script attached.
     public GameObject myo = null;
+	//public BlockScoreLogic _score = Ge
 
     // Materials to change to when poses are made.
     public Material waveInMaterial;
@@ -38,6 +39,16 @@ public class ColorBoxByPose : MonoBehaviour
 
             // Vibrate the Myo armband when a fist is made.
             if (thalmicMyo.pose == Pose.Fist) {
+
+				foreach(GameObject fooObj in GameObject.FindGameObjectsWithTag("enemy"))
+				{
+					fooObj.transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z +20.0f);
+					//(transform.position.x, transform.position.y, transform.position.z - 40.0f);
+					//if(fooObj.name == "bar")
+					
+					//Do Something	
+					
+				}
                 thalmicMyo.Vibrate (VibrationType.Medium);
 
             // Change material when wave in, wave out or thumb to pinky poses are made.
@@ -47,7 +58,10 @@ public class ColorBoxByPose : MonoBehaviour
                 renderer.material = waveOutMaterial;
             } else if (thalmicMyo.pose == Pose.ThumbToPinky) {
                 renderer.material = thumbToPinkyMaterial;
-            }
+			}else if (thalmicMyo.pose == Pose.FingersSpread){
+
+
+			}
         }
     }
 }

@@ -208,7 +208,14 @@ function Update ()
           
  if (actionToPerform == Action.close) 
           if(!parentElement) this.enabled = false;
-
+          
+   
+  /*Elements[0].SetAction(){
+  	Application.LoadLevel ("BlockGame2");
+  
+  
+  } */              
+ 
 }
 //----------------------------------------------------------------------------------
 // Set window  action and/or paramenter for it
