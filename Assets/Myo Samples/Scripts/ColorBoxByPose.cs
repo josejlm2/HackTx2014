@@ -53,12 +53,40 @@ public class ColorBoxByPose : MonoBehaviour
 
             // Change material when wave in, wave out or thumb to pinky poses are made.
             } else if (thalmicMyo.pose == Pose.WaveIn) {
+				foreach(GameObject fooObj in GameObject.FindGameObjectsWithTag("enemy"))
+				{
+					fooObj.transform.position = new Vector3 (transform.position.x + 20.0f, transform.position.y, transform.position.z);
+					//(transform.position.x, transform.position.y, transform.position.z - 40.0f);
+					//if(fooObj.name == "bar")
+					//rigidbody.AddForce
+					//Do Something	
+					
+				}
                 renderer.material = waveInMaterial;
             } else if (thalmicMyo.pose == Pose.WaveOut) {
+				foreach(GameObject fooObj in GameObject.FindGameObjectsWithTag("enemy"))
+				{
+					fooObj.transform.position = new Vector3 (transform.position.x - 20.0f, transform.position.y, transform.position.z );
+					//(transform.position.x, transform.position.y, transform.position.z - 40.0f);
+					//if(fooObj.name == "bar")
+					
+					//Do Something	
+					
+				}
+
                 renderer.material = waveOutMaterial;
             } else if (thalmicMyo.pose == Pose.ThumbToPinky) {
                 renderer.material = thumbToPinkyMaterial;
 			}else if (thalmicMyo.pose == Pose.FingersSpread){
+				foreach(GameObject fooObj in GameObject.FindGameObjectsWithTag("enemy"))
+				{
+					fooObj.transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z );
+					//(transform.position.x, transform.position.y, transform.position.z - 40.0f);
+					//if(fooObj.name == "bar")
+					
+					//Do Something	
+					
+				}
 
 
 			}

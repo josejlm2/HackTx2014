@@ -14,6 +14,7 @@ public class AudioAnalyzer: MonoBehaviour {
 	public GameObject blueCube;
 	public GameObject redCube;
 	public GameObject greenCube;
+	public GameObject Wave;
 	public bool blueCheck = true;
 	public bool redCheck = true;
 
@@ -27,6 +28,14 @@ public class AudioAnalyzer: MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
+		if (!song.isPlaying) {
+
+			Application.LoadLevel(Random.Range(0,4));
+		
+		}
+
 		print(Time.realtimeSinceStartup);
 		//compute instant sound energy
 		float[] channelRight = song.audio.GetSpectrumData (1024, 1, FFTWindow.Hamming);
@@ -110,7 +119,23 @@ public class AudioAnalyzer: MonoBehaviour {
 			
 			
 		}
-
+		else if (e > (constant * E + 0.015) &&  e < (constant * E + .016) ) { // now we check if we have a beat
+			//cube.GetComponent<SpriteRenderer> ().color = Color.red;
+			
+			
+			
+			
+			//cube.GetComponent<SpriteRenderer> ().color = Color.green;
+			
+			GameObject newCube = (GameObject)GameObject.Instantiate (Wave);
+			
+			newCube.transform.position = new Vector3 (0, 0, 35.0f);
+			
+			newCube.transform.Translate (Random.Range (-10, 10), Random.Range (0, 10), 1.0f);
+			
+			
+			
+		}
 
 
 
